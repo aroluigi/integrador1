@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrador FrontEnd</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main>
+    <div class="espacioLibre"></div>
+    <header>
+        <span><img src="./img/codoacodo.png" alt="Logo codo a codo" id="logo"> Conf Bs As</span>
+        <nav>
+            <a href="#">La conferencia</a>
+            <a href="#losOra">Los oradores</a>
+            <a href="#lyf">El lugar y la fecha</a>
+            <a href="#orate">Conviértete en orador</a>
+            <a href="" class="verde">Comprar tickets</a>
+        </nav>
+    </header>
+    
+    <section id="laConf">
+        <ul class="pasaPostales"> <!--Experimental!!-->
+            <li><span>Imagen 01</span></li>
+            <li><span>Imagen 02</span></li>
+            <li><span>Imagen 03</span></li>
+         </ul>
+        
+       <article id="invit">
+           
+                <h2>Conf Bs As</h2>
+                <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a los miembros del evento, a otros estudiantes de Codo a Codo y a los oradores de primer nivel que tenemos para ti. ¡Te esperamos!</p><br>
+            <span class="botones">
+                <span class="conBorde">Quiero ser orador</span><span class="fondoVerde">Comprar tickets</span>
+            </span>
+       </article>
+    </div>
+    </section>
+
+    
+    <section id="losOra">
+        <p>CONOCE A LOS</p>
+        <h2>ORADORES</h2>
+            <div  id="oradores">
+
+                <article class="ficha">
+                    <img src="./img/steve.jpg" alt="Steve Jobs">
+                    <div class="datosOrador">
+                        <span class="etiquetas"><span class="JS">JavaScript</span><span class="R">React</span></span>
+                        <h4>Steve Jobs</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in vulputate lorem, vitae volutpat velit. Donec tincidunt, odio id dictum eleifend, massa odio maximus dolor, in efficitur lectus turpis at eros. Cras id tortor rutrum, ornare ipsum mattis, dictum ipsum. </p>
+                    </div>
+                </article>
+
+                <article class="ficha">
+                    <img src="./img/bill.jpg" alt="Bill Gates">
+                    <div class="datosOrador">
+                        <span class="etiquetas"><span class="JS">JavaScript</span><span class="R">React</span></span>
+                        <h4>Bill Gates</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in vulputate lorem, vitae volutpat velit. Donec tincidunt, odio id dictum eleifend, massa odio maximus dolor, in efficitur lectus turpis at eros. Cras id tortor rutrum, ornare ipsum mattis, dictum ipsum. </p>
+                    </div>
+                  
+                </article>
+                <article class="ficha">
+                    <img src="./img/ada.jpeg" alt="Ada Lovelace">
+                    <div class="datosOrador">
+                        <span class="etiquetas"></span><span class="N">Negocios</span><span class="S">Startups</span></span>
+                        <h4>Ada Lovelace</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in vulputate lorem, vitae volutpat velit. Donec tincidunt, odio id dictum eleifend, massa odio maximus dolor, in efficitur lectus turpis at eros. Cras id tortor rutrum, ornare ipsum mattis, dictum ipsum. </p>
+                    </div>
+                    
+                </article>
+            </div>
+    </section>
+
+
+    <section id="lyf">
+        <div></div>
+        <div>  
+            <h2>Bs As - Octubre</h2>
+            <p>Buenos Aires es la provincia y localidad más grande del estado de Argentina, en los Estados Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la isla (aproximadamente 600 km² de superficie). </p><br>
+            <span class="conBorde">Conocé más</span>
+        </div>
+    </section>
+
+
+    <section id="orate">
+        <p>CONVIÉRTETE EN UN</p>
+        <h2>ORADOR</h2>
+        
+        <p>Anótate como orador para dar una <a href="#">charla ignite</a>. ¡Cuéntanos de qué quieres hablar!</p>
+       
+        <form action="post" id="formulario">
+            <span class="datos">
+                <input type="text" value="Nombre" id="nombre">
+                <input type="text" value="Apellido" id="apellido">
+            </span>
+            <div class="tema">
+                <textarea>¿Sobre qué quieres hablar?</textarea>
+            </div>
+            
+            <p class="recordatorio">Recuerda incluir un título para tu charla.</p><br>
+            <input type="button" value="Enviar" id="enviar"> 
+        </form>
+    </section>
+
+
+    <footer>
+           <nav>
+                <a href="">Preguntas frecuentes</a>
+                <a href="">Contáctanos</a>
+                <a href="">Prensa</a>
+                <a href="">Conferencias</a>
+                <a href="">Términos y condiciones</a>
+                <a href="">Privacidad</a>
+                <a href="">Estudiantes</a>
+            </nav>
+    </footer>
+</main>
+</body>
+</html>
