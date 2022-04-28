@@ -206,14 +206,11 @@ footer a {font-size: 1em; color: white; width: 6em; text-align: center;}
     top: 0px; left: 0px;
     color: transparent;
     background-size: cover;
-    /*background-position: 50% 50%;*/
     background-repeat: none;
     opacity: 0;
     z-index: -1;
-    /*animation: verDiapos 18s linear infinite 0s;*/
     animation-name: verDiapos;
     animation-duration: 30s;
-    /*animation-timing-function: linear;*/
     animation-iteration-count: infinite;
     
 }
@@ -231,16 +228,14 @@ footer a {font-size: 1em; color: white; width: 6em; text-align: center;}
 }
 
 /* Animación para las diapos */
-
-    @keyframes verDiapos { 
-        0% { opacity: 0; animation-timing-function: ease-in;}
-        3% { opacity: 1; animation-timing-function: ease-out; }
-        30.3% { opacity: 1 }
-        /*25% { opacity: 0 }*/
-        33% { opacity: 0 }
+@keyframes verDiapos { 
+        0% { opacity: 0;}
+        5% { opacity: 1;}
+        33.3% { opacity: 1 }
+        38.3% { opacity: 0 }
         100% { opacity: 0 }
     }
-   
+
     /* sin animaciones */
     .no-cssanimations .pasaPostales li span{
             opacity: 1;
