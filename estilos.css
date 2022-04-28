@@ -60,16 +60,18 @@ header a:last-of-type:hover {color: #1ac50b;}
 @media(max-width:648px){
         #invit {
                 max-width: 100vw;
-                font-size: .8rem;
+                font-size: 1em;
                 bottom: 2vw;
                 right: 2vw; 
-                font-size: 1em;
                 padding-bottom: 1rem;
                 padding-left: 2rem;
-        }
-
+        }     
 }
 
+@media(max-width:430px){
+        #invit {font-size: .8em;}
+        #invit h2 {display: none;}
+}
 
 
 #losOra, #orate {margin-top: 1rem;}
