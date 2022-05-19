@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar tickets</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main>
+        <header>
+            <span><!--<img src="./img/codoacodo.png" alt="Logo codo a codo" id="logo">--> Conf Bs As</span>
+            <nav>
+                <a href="./index.html">La conferencia</a>
+                <a href="./index.html#losOra">Los oradores</a>
+                <a href="./index.html#lyf">El lugar y la fecha</a>
+                <a href="./index.html#orate">Conviértete en orador</a>
+                <a href="" class="verde" id="actual">Comprar tickets</a>
+            </nav>
+        </header>
+
+        <section id="comprar">
+            <div id="descuentos">
+                <article class="tarjetaDescuento">
+                    <p>Estudiante</p>
+                    <p>Tienen un descuento</p>
+                    <p> 80% </p>
+                    <p>* presentar documentación</p>
+                </article>
+                <article class="tarjetaDescuento">
+                    <p>Trainee</p>
+                    <p>Tienen un descuento</p>
+                    <p> 50% </p>
+                    <p> * presentar documentación</p>
+                </article>
+                <article class="tarjetaDescuento">
+                    <p>Junior</p>
+                    <p>Tienen un descuento</p>
+                    <p>15%</p>
+                    <p>* presentar documentación</p>
+                </article>
+            </div>
+            <div id="venta">
+                <p>VENTA</p> 
+                <h2>VALOR DE TICKET $200 </h2>
+                <form action="post" id="formularioVenta">
+                    <div id="datosComprador">
+                        <input type="text" placeholder="Nombre" id="nombre">
+                        <input type="text" placeholder="Apellido" id="apellido">
+                    </div>
+                    <div id="contCorreo"><input type="text" placeholder="Correo" id="correo"></div>
+                    
+                    <span id="datosCompra">
+                        <span class="inputRotulado">
+                            <label for="cantidad">Cantidad</label>
+                            <input type="text" placeholder="cantidad" id="cantidad">
+                        </span>
+                        <span class="inputRotulado">
+                            <label for="categoria">Categoría</label> 
+                            <select id="categoria">
+                                <option>Público general</option>
+                                <option>Estudiante</option>
+                                <option>Trainee</option>
+                                <option>Junior</option>
+                            </select>
+                        </span>
+                       
+    
+                    </span>
+                    <div id="total">
+                        <!--<span id="totalAPagar">Total a Pagar: $</span>-->
+                        <input id="totalAPagar" value="Total a Pagar: $">
+                    </div>
+                    <div id="botonesFormularioVenta">
+                        <input type="reset" value="Borrar" id="borrar">
+                        <input type="button" value="Resumen" id="resumen">
+                    </div>
+                              
+                </form>
+                                             
+                
+    
+            </div>
+        </section>
+               
+
+        <footer>
+            <nav>
+                <a href="">Preguntas frecuentes</a>
+                <a href="">Contáctanos</a>
+                <a href="">Prensa</a>
+                <a href="">Conferencias</a>
+                <a href="">Términos y condiciones</a>
+                <a href="">Privacidad</a>
+                <a href="">Estudiantes</a>
+            </nav>
+        </footer>
+     
+    </main>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
