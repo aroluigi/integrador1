@@ -20,7 +20,8 @@ header {
         header nav {padding-right: 6vw; text-align: right;}
 
 header a {font-size: 1.2em; color: #929da1; margin-left: 1.2em; white-space: nowrap;}
-header a:not(:last-of-type):hover {color: white;}
+header a:not(:last-of-type):hover {color: antiquewhite;}
+header a:not(:last-of-type):focus {color: white;}
 header a:last-of-type:hover {color: #1ac50b;}
 header #actual {color: #1ac50b;}
 
@@ -220,11 +221,11 @@ footer a {font-size: 1em; color: white; width: 6em; text-align: center;}
 
 
 /*---------------------------------------------------------Botones--------------------------------------------------------------------------------*/
-.conBorde {border:solid 1px white; padding: .5em; border-radius: 5px;}
+.conBorde {border:solid 1px white; padding: .5em; border-radius: 5px; color: white;}
 
 .conBorde:hover {border:solid 1px black; color: black; background-color: antiquewhite;}
 
-.fondoVerde {padding: .5em; margin: .3em; background-color: #27a844; border-radius: 5px;}
+.fondoVerde {padding: .5em; margin: .3em; background-color: #27a844; border-radius: 5px; color: white;}
 
 .fondoVerde:hover {background-color: #10441b;}
 
