@@ -1,27 +1,32 @@
 const precio=200;
 
+let tarjeta=document.getElementsByClassName('tarjetaDescuento');
 let nombre=document.getElementById('nombre');
 let apellido=document.getElementById('apellido');
 let correo=document.getElementById('correo');
-let categoria=document.getElementById('categoria');
 let cantidad=document.getElementById('cantidad');
-let tarjeta=document.getElementsByClassName('tarjetaDescuento');
+let categoria=document.getElementById('categoria');
+let totalAPagar=document.getElementById('totalAPagar');
 
-function nombreValido(n){if(n.value!=""){return true;}}
-function apellidoValido(a){if(a.value!=""){return true;}}
-function eMailValido(e){if(e.value!=""){return true;}}
-function cantidadValida(c){if(c.value!=""){return true;}}
+var resumen="";
+
+function nombreValido(n){nOK=/^[a-zA-z]+(\s{1}[a-zA-z]+)*$/; if(nOK.test(n.value)){return true;}} //solo letras y espacios
+function apellidoValido(a){aOK=/^[a-zA-z]+(\s{1}[a-zA-z]+)*$/; if(aOK.test(a.value)){return true;}} //solo letras y espacios
+function eMailValido(e){mailOK=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/; if(mailOK.test(e.value)){return true;}}
+function cantidadValida(c){cantOK=/^\d+$/; if(cantOK.test(c.value)){return true;}} //uno o más dígitos
 
 function validarYMostrar(n, a, e, c){
     if(nombreValido(n)){
         if(apellidoValido(a)){
             if(eMailValido(e)){
                 if(cantidadValida(c)){
-                    mostrarResumen();
-                } else c.focus();
-            } else e.focus();
-        } else a.focus();
-    } else n.focus();
+                    r="Por favor, verifique la información ingresada:\n\nYo, " + n.value+" "+ a.value + ", deseo comprar " +c.value+  " entradas de la categoría \""+categoria.value+"\" para la conferencia Bs As, por un precio total de $"  +valorCalculado()+ ". Enviar entradas y comprobante de pago a la dirección de eMail "+ e.value;
+                    vendidas=confirm(r);
+                    return vendidas;
+                } else {c.focus(); c.select();}
+            } else {e.focus(); e.select();}
+        } else {a.focus(); a.select();}
+    } else {n.focus(); n.select();}
 }
 
 // function resaltarCategoria(c){
@@ -39,16 +44,17 @@ function valorCalculado() {
 }
 
 function actualizarValor(){
-    document.getElementById('totalAPagar').value='Total a Pagar: $' + valorCalculado();
+    totalAPagar.value='Total a Pagar: $' + valorCalculado();
 }
 
-var resumen="";
-function mostrarResumen(){
-    ventanaResumen=window.open("enConstruccion.png","width=300,height=200")
+
+function mostrarResumen(r){//no está en uso.
+    //ventanaResumen=window.open("enConstruccion.png","width=300,height=200")
+    confirm(r);
 }
 
 cantidad.oninput=function() {actualizarValor();};
-categoria.oninput=function() {actualizarValor(); resaltarCategoria(this);};
+categoria.oninput=function() {actualizarValor(); /*resaltarCategoria(this);*/};
 
 document.getElementById('resumen').onclick=function() {validarYMostrar(nombre, apellido, correo, cantidad)
 };
